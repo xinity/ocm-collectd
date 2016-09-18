@@ -10,7 +10,7 @@ apt-get install -y wget
 wget --no-check-certificate https://repo.percona.com/apt/percona-release_0.1-4.jessie_all.deb
 
 apt-get update
-apt-get install -y collectd git curl ca-certificates make wget percona-server-client-5.6 && \
+apt-get install -y collectd git curl ca-certificates make wget percona-server-client && \
 
 export GOLANG_VERSION="1.6"
 export GOLANG_DOWNLOAD_URL="https://golang.org/dl/go${GOLANG_VERSION}.linux-amd64.tar.gz"
