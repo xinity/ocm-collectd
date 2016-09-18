@@ -2,12 +2,7 @@
 
 set -e
 
-if [ -n "${MESOS_HOST}" ]; then
-  if [ -z "${COLLECTD_HOST}" ]; then
-    export COLLECTD_HOST="${MESOS_HOST}"
-  fi
-fi
-
+export COLLECTD_HOST="${HOSTNAME}"
 export GRAPHITE_PORT=${GRAPHITE_PORT:-2003}
 export GRAPHITE_PREFIX=${GRAPHITE_PREFIX:-collectd.}
 export COLLECTD_INTERVAL=${COLLECTD_INTERVAL:-10}
