@@ -6,7 +6,7 @@ echo "APT::AutoRemove::RecommendsImportant false;" >> /etc/apt/apt.conf.d/recomm
 echo "APT::AutoRemove::SuggestsImportant   false;" >> /etc/apt/apt.conf.d/recommends.conf
 
 apt-get update
-apt-get install wget
+apt-get install -y wget
 wget https://repo.percona.com/apt/percona-release_0.1-4.jessie_all.deb
 
 apt-get update
