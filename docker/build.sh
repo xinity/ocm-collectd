@@ -8,6 +8,7 @@ echo "APT::AutoRemove::SuggestsImportant   false;" >> /etc/apt/apt.conf.d/recomm
 apt-get update
 apt-get install -y wget
 wget --no-check-certificate https://repo.percona.com/apt/percona-release_0.1-4.jessie_all.deb
+dpkg -i percona-release_0.1-4.jessie_all.deb
 
 apt-get update
 apt-get install -y collectd git curl ca-certificates make wget percona-server-client && \
