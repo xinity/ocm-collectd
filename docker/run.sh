@@ -2,6 +2,11 @@
 
 set -e
 
+if [ -d /mnt/proc ]; then
+  umount /proc
+  mount -o bind /mnt/proc /proc
+fi
+
 export COLLECTD_HOST="${HOSTNAME}"
 export GRAPHITE_PORT=${GRAPHITE_PORT:-2003}
 export GRAPHITE_PREFIX=${GRAPHITE_PREFIX:-collectd.}
