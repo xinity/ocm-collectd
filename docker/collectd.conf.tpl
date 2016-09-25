@@ -43,7 +43,7 @@ LoadPlugin processes
 #LoadPlugin redis
 LoadPlugin swap
 LoadPlugin tcpconns
-LoadPlugin unixsock
+#LoadPlugin unixsock
 LoadPlugin uptime
 LoadPlugin users
 LoadPlugin uuid
