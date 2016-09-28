@@ -20,34 +20,35 @@ LoadPlugin write_graphite
 </Plugin>
 
 
-#LoadPlugin apache
-LoadPlugin conntrack
-LoadPlugin contextswitch
-LoadPlugin cpu
+LoadPlugin apache
+LoadPlugin processes
+LoadPlugin exec
+#LoadPlugin conntrack
+#LoadPlugin contextswitch
+#LoadPlugin cpu
 #LoadPlugin curl
 #LoadPlugin curl_json
 #LoadPlugin curl_xml
-LoadPlugin df
-LoadPlugin disk
-LoadPlugin interface
-LoadPlugin irq
-LoadPlugin load
-LoadPlugin memory
-LoadPlugin mysql
+#LoadPlugin df
+#LoadPlugin disk
+#LoadPlugin interface
+#LoadPlugin irq
+#LoadPlugin load
+#LoadPlugin memory
+#LoadPlugin mysql
 #LoadPlugin postgresql
-LoadPlugin processes
 #LoadPlugin protocols
 #<LoadPlugin python>
 #  Globals true
 #</LoadPlugin>
 #LoadPlugin redis
-LoadPlugin swap
-LoadPlugin tcpconns
+#LoadPlugin swap
+#LoadPlugin tcpconns
 #LoadPlugin unixsock
-LoadPlugin uptime
-LoadPlugin users
-LoadPlugin uuid
-LoadPlugin vmem
+#LoadPlugin uptime
+#LoadPlugin users
+#LoadPlugin uuid
+#LoadPlugin vmem
 #LoadPlugin Varnish
 
 #<Plugin mysql>
@@ -61,7 +62,6 @@ LoadPlugin vmem
 #	</Database>
 #</Plugin>
 
-LoadPlugin exec
 <Plugin exec>
   Exec "collectd-docker-collector" "/usr/bin/collectd-docker-collector" "-endpoint" "unix:///var/run/docker.sock" "-host" "{{ .Env "COLLECTD_HOST" }}" "-interval" "{{ .Env "COLLECTD_INTERVAL" }}"
 </Plugin>
