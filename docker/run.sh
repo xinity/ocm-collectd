@@ -10,9 +10,6 @@ fi
 export GRAPHITE_PORT=${GRAPHITE_PORT:-2003}
 export GRAPHITE_PREFIX=${GRAPHITE_PREFIX:-collectd.}
 export COLLECTD_INTERVAL=${COLLECTD_INTERVAL:-10}
-export MYSQL_HOST=${MYSQL_PORT:-localhost}
-export MYSQL_USER=${MYSQL_USER:-root}
-export MYSQL_PASSWORD=${MYSQL_PASSWORD:-password}
 
 # Adding a user if needed to be able to communicate with docker
 GROUP=nobody

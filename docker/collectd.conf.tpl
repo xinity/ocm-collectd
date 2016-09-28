@@ -51,17 +51,6 @@ LoadPlugin exec
 #LoadPlugin vmem
 #LoadPlugin Varnish
 
-#<Plugin mysql>
-#	<Database db_name>
-#		Host "database.serv.er"
-#		User "root"
-#		Password "password"
-#		MasterStats true
-#		ConnectTimeout 10
-#		InnodbStats true
-#	</Database>
-#</Plugin>
-
 <Plugin exec>
   Exec "collectd-docker-collector" "/usr/bin/collectd-docker-collector" "-endpoint" "unix:///var/run/docker.sock" "-host" "{{ .Env "COLLECTD_HOST" }}" "-interval" "{{ .Env "COLLECTD_INTERVAL" }}"
 </Plugin>
